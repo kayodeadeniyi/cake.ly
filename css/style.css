@@ -1,0 +1,65 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #4a148c;
+}
+
+header h1 {
+  font-family:Helvetica,Arial,Verdana,sans-serif;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+.main-gallery {
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  height: 70%;
+  width: 98%;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #b71c1c;
+  -webkit-animation: mymove 5s infinite;
+  animation: mymove 5s infinite;
+}
+
+@-webkit-keyframes mymove {
+  50% {background-color: #283593;}
+}
+
+@keyframes mymove {
+  50% {background-color: #283593;}
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #ef5350;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
