@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cake.ly</title>
+    <title>Cakely</title>
     <link rel="stylesheet" href="/css/style.css" media="screen" title="no title" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://npmcdn.com/flickity@1.1/dist/flickity.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Cake.ly</h1>
-    </header>
     <main>
-      <div class="main-gallery">Hello World</div>
-      <div class="gallery js-flickity" data-flickity-options='{ "autoPlay": 1500 }'>
-        <div class="gallery-cell"></div>
-        <div class="gallery-cell"></div>
-        <div class="gallery-cell"></div>
-        <div class="gallery-cell"></div>
-        <div class="gallery-cell"></div>
-      </div>
-    </main>
-    <footer>
+      <section class="ck-carousels">
+        <div class="ck-main-carousel">
 
-    </footer>
+        </div>
+        <div class="ck-thumb-carousel">
+
+        </div>
+      </section>
+      <div class="ck-navbar"></div>
+      <div class="ck-sidebar">
+        <div class="ck-sidebar-content"></div>
+      </div>
+      <section class="ck-hero">
+        <div class="ck-hero-content">
+          <img src="assets/logo-lg.png">
+          <p>The one-click cake shop!</p>
+          <button>Browse Cakes</button>
+        </div>
+      </section>
+    </main>
     <script type='text/javascript' src='js/script.js'></script>
   </body>
 </html>
