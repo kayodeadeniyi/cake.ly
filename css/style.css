@@ -51,11 +51,23 @@ html, body, main, .ck-carousels {
 }
 
 body {
+  position: relative;
   background-color: #fff;
 }
 
 main {
   position: relative;
+}
+
+main.collapse {
+  width: -moz-calc(100% - 400px);
+  width: -webkit-calc(100% - 400px);
+  width: calc(100% - 400px);
+}
+
+main, .ck-sidebar {
+  -webkit-transition: 1s; /* Safari */
+  transition: 1s;
 }
 
 main > * {
@@ -73,6 +85,17 @@ main > * {
 
 .ck-navbar.open{
   top: 0;
+}
+
+.ck-cover {
+  bottom: -100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 100%;
+  width: 100%;
+}
+
+.ck-cover.open{
+  bottom: 0;
 }
 
 .ck-carousels {
@@ -93,31 +116,32 @@ main > * {
   background-color: #333;
 }
 
-.ck-hero, .ck-sidebar {
+.ck-hero {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
 .ck-sidebar {
-  visibility: hidden;
-  -webkit-transition: visibility .1s; /* Safari */
-  transition: visibility .1s;
-}
-
-.ck-sidebar-content {
   position: absolute;
   top: 0;
-  right: -500px;
-  width: 500px;
+  right: -400px;
+  width: 400px;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  -webkit-transition: right .5s; /* Safari */
-  transition: right .5s;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
+/*.ck-sidebar-content {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 300px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}*/
+
 .ck-sidebar.open {
-  visibility: visible;
+  right: 0px;
 }
 
 .ck-sidebar.open .ck-sidebar-content{

@@ -1,6 +1,5 @@
 
 var navbar = {
-  // variables
   $element: $('.ck-navbar'),
 
   show: function() {
@@ -9,42 +8,55 @@ var navbar = {
 }
 
 var hero = {
-  // variables
   $browseBtn: $('.ck-hero-content button'),
   $baseElement: $('.ck-hero'),
 
   init: function() {
-    this.$browseBtn.click(function(){
+    this.$browseBtn.click(function() {
       navbar.show()
       hero.$baseElement.fadeOut()
     })
   }
 }
+var main = {
+  $baseElement: $('main'),
+  $collapsedMain: $('main.collapse')
+}
+
+var cover = {
+  $baseElement: $('.ck-cover'),
+
+  init: function() {
+    this.$baseElement.click(function() {
+      sideBar.$baseElement.removeClass('open')
+      main.$baseElement.removeClass('collapse')
+      $(this).removeClass('open')
+    })
+  }
+}
 
 var carousels = {
-  // variables
   $mainCarousel: $('.ck-main-carousel'),
 
   init: function() {
-    this.$mainCarousel.click(function(){
+    this.$mainCarousel.click(function() {
       sideBar.open()
     })
   }
 }
 
 var sideBar = {
-  // variables
   $baseElement: $('.ck-sidebar'),
 
   open: function() {
     sideBar.$baseElement.addClass('open')
-    sideBar.$baseElement.click(function(){
-      $(this).removeClass('open')
-    })
+    cover.$baseElement.addClass('open')
+    main.$baseElement.addClass('collapse')
   }
 }
 
 $(document).ready(function(){
   hero.init()
   carousels.init()
+  cover.init()
 })
