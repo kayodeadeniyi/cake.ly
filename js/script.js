@@ -216,7 +216,7 @@ var flicker = {
         prevNextButtons: false
     }
     var carouselThumb = this.$carouselThumb.flickity(flickityConfig)
-    flickityConfig.autoPlay = false
+    // flickityConfig.autoPlay = false
     $carouselMain = this.$carouselMain.flickity(flickityConfig)
 
     this.$carouselThumb.on( 'cellSelect', function() {
