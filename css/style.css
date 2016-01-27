@@ -123,12 +123,13 @@ main > * {
 .ck-main-carousel .carousel-item {
 		width: 100%;
 		height: 100%;
+		margin: 0 0.5px;
 }
 
 .ck-main-carousel .carousel-item .overlay {
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0,0,0,0.3);
+		background-color: rgba(0,0,0,0.5);
 }
 
 .ck-thumb-carousel .carousel-item .overlay {
@@ -209,4 +210,19 @@ main > * {
   letter-spacing: -1px;
   color: #fff;
   margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+	.ck-sidebar {
+		width: 60%;
+		right: -60%;
+	}
+
+	.ck-sidebar.open {
+	  right: 0;
+	}
+
+	main.collapse {
+	  width: 40%;
+	}
 }

@@ -129,6 +129,51 @@ var seedData = {
 
   ]
 }
+var carouselThumb
+var flicker = {
+  $carouselMain: $('.ck-main-carousel'),
+  $carouselThumb: $('.ck-thumb-carousel'),
+  thumbItemSample: '<div class="carousel-item imgFilled"><img src="#"/><div class="overlay"></div></div>',
+  flickityConfig: {
+    cellSelector: '.carousel-item',
+    setGallerySize: false,
+    freeScroll: true,
+    wrapAround: true,
+    autoPlay: 5000,
+    imagesLoaded: true,
+    pageDots: false,
+    prevNextButtons: false,
+    selectedAttraction: 0.01,
+    friction: 0.15
+  },
+  init: function() {
+    //populate the galleries:
+    for (var i = 0; i < 21; i++ ) {
+      var cake = seedData.cakes[i]
+      var carouselItem = $(this.thumbItemSample)
+      var carouselItem2 = $(this.thumbItemSample)
+      var largeImg = cake.imageSrc.split('/c_fill,w_100,h_100').join('')
+      carouselItem.find('img').attr('src',cake.imageSrc)
+      this.$carouselThumb.append(carouselItem)
+      carouselItem2.find('img').attr('src',largeImg)
+      this.$carouselMain.append(carouselItem2)
+    }
+
+    carouselThumb = this.$carouselThumb.flickity(this.flickityConfig)
+    this.flickityConfig.autoPlay = false
+    var carouselMain = this.$carouselMain.flickity(this.flickityConfig)
+
+    carouselThumb.on( 'staticClick', function(event, pointer, cellElement, cellIndex) {
+      carouselMain.flickity( 'select', cellIndex)
+      carouselThumb.flickity( 'select', cellIndex)
+      carouselThumb.data('flickity').activatePlayer()
+    })
+
+    carouselThumb.on( 'cellSelect', function() {
+      carouselMain.flickity( 'select', carouselThumb.data('flickity').selectedIndex)
+    })
+  }
+}
 
 var navbar = {
   $element: $('.ck-navbar'),
@@ -162,6 +207,7 @@ var cover = {
       sideBar.$baseElement.removeClass('open')
       main.$baseElement.removeClass('collapse')
       $(this).removeClass('open')
+      carouselThumb.data('flickity').activatePlayer()
     })
   }
 }
@@ -172,6 +218,7 @@ var carousels = {
   init: function() {
     this.$mainCarousel.click(function() {
       sideBar.open()
+      carouselThumb.data('flickity').deactivatePlayer()
     })
   }
 }
@@ -183,46 +230,6 @@ var sideBar = {
     sideBar.$baseElement.addClass('open')
     cover.$baseElement.addClass('open')
     main.$baseElement.addClass('collapse')
-  }
-}
-
-var flicker = {
-  $carouselMain: $('.ck-main-carousel'),
-  $carouselThumb: $('.ck-thumb-carousel'),
-  thumbItemSample: '<div class="carousel-item imgFilled"><img src="#"/><div class="overlay"></div></div>',
-
-  init: function() {
-    //populate the galleries:
-    for (var i = 0; i < 21; i++ ) {
-      var cake = seedData.cakes[i]
-      var carouselItem = $(this.thumbItemSample)
-      var carouselItem2 = $(this.thumbItemSample)
-      var largeImg = cake.imageSrc.split('/c_fill,w_100,h_100').join('')
-      carouselItem.find('img').attr('src',cake.imageSrc)
-      this.$carouselThumb.append(carouselItem)
-      carouselItem2.find('img').attr('src',largeImg)
-      this.$carouselMain.append(carouselItem2)
-    }
-
-    // initialize the galleries with flickity
-    flickityConfig = {
-        cellSelector: '.carousel-item',
-        setGallerySize: false,
-        freeScroll: true,
-        wrapAround: true,
-        autoPlay: true,
-        imagesLoaded: true,
-        pageDots: false,
-        prevNextButtons: false
-    }
-    var carouselThumb = this.$carouselThumb.flickity(flickityConfig)
-    flickityConfig.autoPlay = false
-    var carouselMain = this.$carouselMain.flickity(flickityConfig)
-
-    carouselThumb.on( 'cellSelect', function() {
-      console.log( 'Flickity select ' + carouselThumb.data('flickity').selectedIndex )
-      carouselMain.flickity( 'select', carouselThumb.data('flickity').selectedIndex )
-    })
   }
 }
 
@@ -241,7 +248,6 @@ var imageLiquid = {
   },
 
   init: function(customConfig){
-    // intializes the plugin on images:
     $('.imgFilled').imgLiquid(imageLiquid.config.filled)
     $('.imgFitted').imgLiquid(imageLiquid.config.fitted)
   }
