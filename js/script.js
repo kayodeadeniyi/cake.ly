@@ -13,7 +13,7 @@ var seedData = {
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/Cake_Hd_Walpapers-007_cyi2o3.jpg'
     },
     {
-      name:'Chocolate Bazooka',
+      name:'Caramel Heart',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/amazingly_delicious_cake_aece2d.jpg'
@@ -31,7 +31,7 @@ var seedData = {
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/Cake_Hd_Walpapers-007_cyi2o3.jpg'
     },
     {
-      name:'Chocolate Bazooka',
+      name:'Caramel Heart',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/amazingly_delicious_cake_aece2d.jpg'
@@ -49,7 +49,7 @@ var seedData = {
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/Cake_Hd_Walpapers-007_cyi2o3.jpg'
     },
     {
-      name:'Chocolate Bazooka',
+      name:'Caramel Heart',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/amazingly_delicious_cake_aece2d.jpg'
@@ -67,7 +67,7 @@ var seedData = {
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/Cake_Hd_Walpapers-007_cyi2o3.jpg'
     },
     {
-      name:'Chocolate Bazooka',
+      name:'Caramel Heart',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/amazingly_delicious_cake_aece2d.jpg'
@@ -85,7 +85,7 @@ var seedData = {
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/Cake_Hd_Walpapers-007_cyi2o3.jpg'
     },
     {
-      name:'Chocolate Bazooka',
+      name:'Caramel Heart',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/amazingly_delicious_cake_aece2d.jpg'
@@ -103,7 +103,7 @@ var seedData = {
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/Cake_Hd_Walpapers-007_cyi2o3.jpg'
     },
     {
-      name:'Chocolate Bazooka',
+      name:'Caramel Heart',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/amazingly_delicious_cake_aece2d.jpg'
@@ -111,7 +111,7 @@ var seedData = {
     {
       name:'Chocolate Bazooka',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      price:'1999.99',
+      price:'3999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/home-bg_t1rosa.jpg'
     },
     {
@@ -121,9 +121,9 @@ var seedData = {
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/Cake_Hd_Walpapers-007_cyi2o3.jpg'
     },
     {
-      name:'Chocolate Bazooka',
+      name:'Caramel Heart',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      price:'1999.99',
+      price:'2999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/amazingly_delicious_cake_aece2d.jpg'
     }
 
@@ -134,6 +134,7 @@ var flicker = {
   $carouselMain: $('.ck-main-carousel'),
   $carouselThumb: $('.ck-thumb-carousel'),
   thumbItemSample: '<div class="carousel-item imgFilled"><img src="#"/><div class="overlay"></div></div>',
+  mainItemSample: '<div class="carousel-item imgFilled"><img src="#"/><div class="overlay"><div class="details"><h1 class="title"></h1><span></span><p class="amount"></p><button>ORDER NOW</button></div></div></div>',
   flickityConfig: {
     cellSelector: '.carousel-item',
     setGallerySize: false,
@@ -151,11 +152,18 @@ var flicker = {
     for (var i = 0; i < 21; i++ ) {
       var cake = seedData.cakes[i]
       var carouselItem = $(this.thumbItemSample)
-      var carouselItem2 = $(this.thumbItemSample)
+      var carouselItem2 = $(this.mainItemSample)
       var largeImg = cake.imageSrc.split('/c_fill,w_100,h_100').join('')
       carouselItem.find('img').attr('src',cake.imageSrc)
       this.$carouselThumb.append(carouselItem)
       carouselItem2.find('img').attr('src',largeImg)
+      carouselItem2.find('.title').text(cake.name)
+      carouselItem2.find('span').text(cake.description)
+      carouselItem2.find('.amount').text('Starts at \u20A6 ' + cake.price)
+      carouselItem2.find('button').click(function() {
+        sideBar.open()
+        carouselThumb.data('flickity').deactivatePlayer()
+      })
       this.$carouselMain.append(carouselItem2)
     }
 
@@ -189,6 +197,7 @@ hero = {
 
   init: function() {
     this.$browseBtn.click(function() {
+      $('.details').css('visibility', 'visible')
       navbar.show()
       hero.$baseElement.fadeOut()
     })
@@ -213,10 +222,10 @@ var cover = {
 }
 
 var carousels = {
-  $mainCarousel: $('.ck-main-carousel'),
+  $mainCarouselButton: $('.ck-main-carousel .carousel-item .details'),
 
   init: function() {
-    this.$mainCarousel.click(function() {
+    this.$mainCarouselButton.click(function() {
       sideBar.open()
       carouselThumb.data('flickity').deactivatePlayer()
     })
