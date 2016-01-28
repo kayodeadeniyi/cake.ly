@@ -215,10 +215,9 @@ main > * {
 @media only screen and (max-width: 767px) {
 	.ck-sidebar {
 		width: 60%;
-		right: -60%;
 	}
 
-	.ck-sidebar.open {
+	.ck-sidebar.open, .ck-sidebar.open .ck-sidebar-content {
 	  right: 0;
 	}
 
