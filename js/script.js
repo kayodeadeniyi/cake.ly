@@ -1,128 +1,128 @@
 var seedData = {
   cakes: [
     {
-      name:'Chocolate Bazooka',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name:'Caramel Heart',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/home-bg_t1rosa.jpg'
     },
     {
-      name:'S Bazooka',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name:'Berry Pi',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/Cake_Hd_Walpapers-007_cyi2o3.jpg'
     },
     {
       name:'Caramel Heart',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/amazingly_delicious_cake_aece2d.jpg'
     },
     {
-      name:'Chocolate Bazooka',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name:'Caramel Heart',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/home-bg_t1rosa.jpg'
     },
     {
-      name:'S Bazooka',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name:'Berry Pi',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/Cake_Hd_Walpapers-007_cyi2o3.jpg'
     },
     {
       name:'Caramel Heart',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/amazingly_delicious_cake_aece2d.jpg'
     },
     {
-      name:'Chocolate Bazooka',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name:'Caramel Heart',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/home-bg_t1rosa.jpg'
     },
     {
-      name:'S Bazooka',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name:'Berry Pi',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/Cake_Hd_Walpapers-007_cyi2o3.jpg'
     },
     {
       name:'Caramel Heart',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/amazingly_delicious_cake_aece2d.jpg'
     },
     {
-      name:'Chocolate Bazooka',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name:'Caramel Heart',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/home-bg_t1rosa.jpg'
     },
     {
-      name:'S Bazooka',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name:'Berry Pi',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/Cake_Hd_Walpapers-007_cyi2o3.jpg'
     },
     {
       name:'Caramel Heart',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/amazingly_delicious_cake_aece2d.jpg'
     },
     {
-      name:'Chocolate Bazooka',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name:'Caramel Heart',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/home-bg_t1rosa.jpg'
     },
     {
-      name:'S Bazooka',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name:'Berry Pi',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/Cake_Hd_Walpapers-007_cyi2o3.jpg'
     },
     {
       name:'Caramel Heart',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/amazingly_delicious_cake_aece2d.jpg'
     },
     {
-      name:'Chocolate Bazooka',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name:'Caramel Heart',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/home-bg_t1rosa.jpg'
     },
     {
-      name:'S Bazooka',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name:'Berry Pi',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/Cake_Hd_Walpapers-007_cyi2o3.jpg'
     },
     {
       name:'Caramel Heart',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/amazingly_delicious_cake_aece2d.jpg'
     },
     {
-      name:'Chocolate Bazooka',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name:'Caramel Heart',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'3999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/home-bg_t1rosa.jpg'
     },
     {
-      name:'S Bazooka',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name:'Berry Pi',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'1999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/Cake_Hd_Walpapers-007_cyi2o3.jpg'
     },
     {
       name:'Caramel Heart',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: 'Caramel fluff and icing with fruity Strawberry toppings!',
       price:'2999.99',
       imageSrc:'http://res.cloudinary.com/awiliuzo/image/upload/c_fill,w_100,h_100/v1453842919/amazingly_delicious_cake_aece2d.jpg'
     }
@@ -134,13 +134,14 @@ var flicker = {
   $carouselMain: $('.ck-main-carousel'),
   $carouselThumb: $('.ck-thumb-carousel'),
   thumbItemSample: '<div class="carousel-item imgFilled"><img src="#"/><div class="overlay"></div></div>',
-  mainItemSample: '<div class="carousel-item imgFilled"><img src="#"/><div class="overlay"><div class="details"><h1 class="title"></h1><span></span><p class="amount"></p><button>ORDER NOW</button></div></div></div>',
+  mainItemSample: '<div class="carousel-item imgFilled"><img src="#"/><div class="overlay"><div class="details"><h1 class="title"></h1><p class="description"></p><p class="amount"></p><button>ORDER NOW</button></div></div></div>',
+
   flickityConfig: {
     cellSelector: '.carousel-item',
     setGallerySize: false,
     freeScroll: true,
     wrapAround: true,
-    autoPlay: 5000,
+    autoPlay: 6000,
     imagesLoaded: true,
     pageDots: false,
     prevNextButtons: false,
@@ -158,7 +159,7 @@ var flicker = {
       this.$carouselThumb.append(carouselItem)
       carouselItem2.find('img').attr('src',largeImg)
       carouselItem2.find('.title').text(cake.name)
-      carouselItem2.find('span').text(cake.description)
+      carouselItem2.find('.description').text(cake.description)
       carouselItem2.find('.amount').text('Starts at \u20A6 ' + cake.price)
       carouselItem2.find('.amount').data('val', cake.price)
       carouselItem2.find('button').click(function() {
@@ -237,12 +238,12 @@ var carousels = {
 var sideBar = {
   $baseElement: $('.ck-sidebar'),
   $title: $('.order-form .title'),
-  $desc: $('.order-form span'),
+  $desc: $('.order-form .description'),
   $amount: $('.order-form .amount'),
 
   open: function() {
     $selectedCarouselTitle = $('.is-selected .details .title').text()
-    $selectedCarouselDesc = $('.is-selected .details span').text()
+    $selectedCarouselDesc = $('.is-selected .details .description').text()
     $selectedCarouselAmount = $('.is-selected .details .amount').data('val')
     sideBar.$title.text($selectedCarouselTitle)
     sideBar.$desc.text($selectedCarouselDesc)

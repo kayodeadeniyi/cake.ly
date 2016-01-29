@@ -1,4 +1,4 @@
-/* Css reset script*
+/* Css reset script */
 input[type='radio']html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,6 +20,19 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+
+@font-face {
+    font-family: 'otamaepregular';
+    src: url('../fonts/otama-ep-webfont.eot');
+    src: url('../fonts/otama-ep-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/otama-ep-webfont.woff2') format('woff2'),
+         url('../fonts/otama-ep-webfont.woff') format('woff'),
+         url('../fonts/otama-ep-webfont.ttf') format('truetype'),
+         url('../fonts/otama-ep-webfont.svg#otama.epregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -122,66 +135,69 @@ main > * {
 .ck-main-carousel .carousel-item .details {
 	display: none;
 	position: absolute;
-	bottom: 20%;
-	left: 10%;
+	bottom: 10%;
+	left: 5%;
 	text-align: left;
 	width: 100%;
 }
 
 .ck-main-carousel .carousel-item .details .title{
 	font-size: 80px;
-	font-weight: 500;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: -1px;
+    font-family: 'otamaepregular', serif;
+    font-weight: normal;
+    letter-spacing: -2px;
 	color: #fff;
-	padding: 20px 0;
+	padding: 10px 0;
+    margin: 0;
 }
 
-.ck-main-carousel .carousel-item .details span{
+.ck-main-carousel .carousel-item .details .description{
 	display: inline-block;
 	width: 60%;
 	max-width: 600px;
 	color: #fff;
-	font-size: 24px;
+	font-size: 40px;
 	font-weight: 100;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: -1px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: -1px;
 	font-style: italic;
 	padding: 10px 0;
+    margin: 0;
 }
 
 .ck-main-carousel .carousel-item .details .amount{
 	color: #fff;
 	font-size: 18px;
-	font-weight: 100;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: -1px;
-	padding: 20px 0;
+	font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0px;
+	padding: 20px 5px;
+    margin: 0;
 }
 
 .order-form{
 	padding: 10px 15px;
-	margin-top: 30%;
-	text-align: center;
+    text-align: center;
 }
 
 .order-form .title{
-	font-size: 40px;
-	font-weight: 600;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: -1px;
+	font-size: 50px;
+	font-weight: normal;
+    font-family: 'otamaepregular', serif;
+    letter-spacing: -2px;
 	color: #8C4600;
 	padding: 20px 0;
+    margin: 5px 0;
 }
 
-.order-form span{
-	display: inline-block;
+.order-form .description{
 	color: #000;
 	font-size: 24px;
-	font-weight: 100;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: -1px;
+	font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: -1px;
 	padding: 10px 0;
+    margin: 5px 0;
 }
 
 .ck-thumb-carousel .carousel-item {
@@ -200,12 +216,17 @@ main > * {
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0,0,0,0.5);
+        transition: 0.3s;
 }
 
 .ck-thumb-carousel .carousel-item .overlay {
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0,0,0,0.5);
+		background-color: rgba(255,255,255,0.5);
+}
+
+.ck-thumb-carousel .carousel-item:hover .overlay{
+    background-color: rgba(0,0,0,0.3);
 }
 
 .ck-thumb-carousel .is-selected {
@@ -213,13 +234,7 @@ main > * {
 }
 
 .ck-thumb-carousel .is-selected .overlay{
-		background-color: rgba(0,0,0,0.1);
-}
-
-.ck-hero {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+	background-color: rgba(0,0,0,0);
 }
 
 .ck-sidebar {
@@ -234,11 +249,12 @@ main > * {
 
 .logo {
 	float: left;
-	margin-top: 20px;
-	margin-left: 40px;
+	margin-top: 30px;
+	margin-left: 5%;
 }
 .logo img {
-	height: 80px;
+	height: 50px;
+    opacity: 0.4;
 }
 
 .ck-sidebar.open {
@@ -247,6 +263,12 @@ main > * {
 
 .ck-sidebar.open .ck-sidebar-content{
   right: 0;
+}
+
+.ck-hero {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .ck-hero-content {
@@ -258,38 +280,59 @@ main > * {
 }
 
 .ck-hero-content img {
-  margin-bottom: 50px;
+  /*margin-bottom: 30px;*/
+  width: 400px;
+  height: auto;
 }
 
 .ck-hero-content button, .details button, .order-form button {
-  padding: 20px 80px;
-  font-size: 18px;
+  padding: 20px 60px;
+  font-size: 16px;
   font-weight: 700;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.ck-hero-content button {
+   color: #8C4600;
+   border-color: #8D4600;
 }
 
 .order-form button {
 	background-color: #8C4600;
 	width: 100%;
+    margin: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .ck-hero-content button:hover, .details button:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+.ck-hero-content button:hover {
+   color: #fff;
+   background-color: #8C4600;
+}
+
 .ck-hero p {
-  font-size: 40px;
-  font-weight: 300;
+  font-size: 50px;
+  font-weight: 100;
   font-family: 'Raleway', sans-serif;
   letter-spacing: -1px;
-  color: #fff;
+  color: #8D4600;
   margin-bottom: 40px;
 }
 
 input[type='radio'] {
+    appearance: none;
 	-webkit-appearance: none;
+    outline: none;
 	position: relative;
 	background-color: #fafafa;
 	border: 1px solid #cacaca;
@@ -313,15 +356,17 @@ input[type='radio']:checked:after {
 .order-form p, .order-form label, .response {
 	margin: 10px;
 	color: #000;
-	font-size: 20px;
-	font-weight: 600;
-	font-family: 'Raleway', sans-serif;
-	letter-spacing: -1px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+	letter-spacing: 0px;
 }
 
 .order-form .amount, .response {
 	color: #8C4600;
 	font-size: 28px;
+    font-weight: 500;
+    margin: 30px;
 }
 
 .response {
