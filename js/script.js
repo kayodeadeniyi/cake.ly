@@ -160,6 +160,7 @@ var flicker = {
       carouselItem2.find('.title').text(cake.name)
       carouselItem2.find('span').text(cake.description)
       carouselItem2.find('.amount').text('Starts at \u20A6 ' + cake.price)
+      carouselItem2.find('.amount').data('val', cake.price)
       carouselItem2.find('button').click(function() {
         sideBar.open()
         carouselThumb.data('flickity').deactivatePlayer()
@@ -197,7 +198,7 @@ hero = {
 
   init: function() {
     this.$browseBtn.click(function() {
-      $('.details').css('visibility', 'visible')
+      $('.details').fadeIn(1000)
       navbar.show()
       hero.$baseElement.fadeOut()
     })
@@ -213,6 +214,7 @@ var cover = {
 
   init: function() {
     this.$baseElement.click(function() {
+      form.$defaultRadio.prop('checked', true)
       sideBar.$baseElement.removeClass('open')
       main.$baseElement.removeClass('collapse')
       $(this).removeClass('open')
@@ -234,8 +236,19 @@ var carousels = {
 
 var sideBar = {
   $baseElement: $('.ck-sidebar'),
+  $title: $('.order-form .title'),
+  $desc: $('.order-form span'),
+  $amount: $('.order-form .amount'),
 
   open: function() {
+    $selectedCarouselTitle = $('.is-selected .details .title').text()
+    $selectedCarouselDesc = $('.is-selected .details span').text()
+    $selectedCarouselAmount = $('.is-selected .details .amount').data('val')
+    sideBar.$title.text($selectedCarouselTitle)
+    sideBar.$desc.text($selectedCarouselDesc)
+    sideBar.$amount.text('\u20A6 ' + $selectedCarouselAmount)
+    sideBar.$amount.data('val', $selectedCarouselAmount)
+    form.$form.css('visibility', 'visible')
     sideBar.$baseElement.addClass('open')
     cover.$baseElement.addClass('open')
     main.$baseElement.addClass('collapse')
@@ -262,8 +275,39 @@ var imageLiquid = {
   }
 }
 
+var form = {
+  $form: $('.order-form'),
+  $button: $('.order-form button'),
+  $size: $('.size'),
+  $amount: $('.order-form .amount'),
+  $defaultRadio: $('#default'),
+
+  formInit: function() {
+    this.$form.submit(function(event) {
+      event.preventDefault()
+      form.$form.css('visibility', 'hidden')
+      $.when($('<p class="response hidden">Thanks for the purchase</p>').insertBefore($('.order-form')).fadeIn(1000).delay(2000).fadeOut(1000)).done(function() {
+        cover.$baseElement.click()
+      })
+    })
+  },
+  sizeInit: function() {
+    this.$size.map(function() {
+      $(this).click(function(e) {
+        var value = e.target.value
+        form.$amount.text('\u20A6 ' + (parseFloat(form.$amount.data('val') * value)))
+      })
+    })
+  },
+  init: function() {
+    this.formInit()
+    this.sizeInit()
+  }
+}
+
 $(document).ready(function(){
   hero.init()
+  form.init()
   carousels.init()
   cover.init()
   flicker.init()
