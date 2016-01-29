@@ -32,7 +32,29 @@
       <div class="ck-cover"></div>
     </main>
     <aside class="ck-sidebar">
-
+      <form class="order-form">
+        <h1 class="title"></h1>
+        <span></span>
+        <hr />
+        <p>Choose cake size </p>
+        <label>
+          <input type="radio" name="size" class="size" value='3' />
+          Max
+        </label>
+        <label>
+          <input type="radio" name="size" class="size" value='2' />
+          Midi
+        </label>
+        <label>
+          <input type="radio" name="size" id="default" class="size" value='1' checked />
+          Mini
+        </label>
+        <hr />
+        <p class="amount"></p>
+        <hr />
+        <button role="submit">BUY</button>
+        <!-- <input type="submit" value="BUY"> -->
+      </form>
     </aside>
     <script type='text/javascript' src='./js/script.js'></script>
   </body>
